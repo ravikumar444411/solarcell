@@ -1,0 +1,130 @@
+
+span.minValue {
+  font-size: 15px;
+  font-weight: 400;
+  padding: 10px;
+}
+span.maxValue {
+  font-size: 15px;
+  font-weight: 400;
+  padding: 10px;
+}
+
+.materialSpan {
+  width: auto;
+  height: 35px;
+  background-color: antiquewhite;
+  display: inline-block;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: cursive;
+}
+.materialSpanSelect {
+  width: auto;
+  height: 35px;
+  background-color: aqua;
+  display: inline-block;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: cursive;
+}
+
+.tempBox {
+  display: flex;
+  padding: 10px;
+}
+p.tempText {
+  font-size: 14px;
+  font-weight: 500;
+}
+input.TempInput {
+  margin-left: 10px;
+  width: 80px;
+  height: 24px;
+}
+
+
+.example-h2 {
+    margin: 0 8px 16px;
+  }
+  
+  .example-section {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 60px;
+  }
+  
+  .example-margin {
+    margin: 8px;
+  }
+  
+  .mat-slider-horizontal {
+    width: 300px;
+  }
+  
+  .mat-slider-vertical {
+    height: 300px;
+  }
+  
+  .mat-card + .mat-card {
+    margin-top: 8px;
+  }
+  
+  .example-result-card h2 {
+    margin: 0 8px;
+  }
+  
+  .example-result-card .example-label-container.example-label-horizontal {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 12px 16px;
+    max-width: 284px;
+  }
+  
+  .example-result-card .example-label-container.example-label-vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 68px;
+    height: 48px;
+  }
+  
+  .example-result-card .example-value-label {
+    font-weight: 600;
+  }
+
+  span.maxValue {
+    margin-left: 240px;
+}
+p.titleHead {
+  font-size: 15px;
+  font-weight: 700;
+  margin-top: 15px;
+  margin-left: 10px;
+}
+
+p.constantDetails {
+  font-size: 13px;
+  font-weight: 500;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+span.constantValue {
+  font-weight: 800;
+}
+p.OutputHead {
+  font-size: 18px;
+  margin-bottom: 0px;
+  font-weight: 500;
+  margin-top: 18px;
+  margin-left: 10px;
+}
+  
