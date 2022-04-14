@@ -1,4 +1,17 @@
 
+
+
+p.solarTitle {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 6px;
+}
+p.solarTheory {
+  font-size: 12px;
+  font-family: fangsong;
+  margin: 7px;
+}
+
 span.minValue {
   font-size: 15px;
   font-weight: 400;

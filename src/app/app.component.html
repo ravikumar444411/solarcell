@@ -2,21 +2,22 @@
 
 <!-- <app-current></app-current> -->
 
-<!-- <mat-grid-list cols="2" class="m-3 p-5" >
-  <mat-grid-tile >
-    <div>
-
-      <h3>Theory of solar cell</h3>
-      <p class="m-3 p-5">The efficiency is the most commonly used parameter to compare the performance of one solar cell to another. Efficiency is defined as the ratio of energy output from the solar cell to input energy from the sun. In addition to reflecting the performance of the solar cell itself, the efficiency depends on the spectrum and intensity of the incident sunlight and the temperature of the solar cell. Therefore, conditions under which efficiency is measured must be carefully controlled in order to compare the performance of one device to another. Terrestrial solar cells are measured under AM1.5 conditions and at a temperature of 25°C. Solar cells intended for space use are measured under AM0 conditions. Recent top efficiency solar cell results are given in the page</p>
-    </div>
-
-  </mat-grid-tile>
-  <mat-grid-tile>2</mat-grid-tile>
-</mat-grid-list> -->
 
 
-  
+<p class="solarTitle"> Aim:-  </p>
+<p class="solarTheory"> The efficiency is the most </p>
+<p class="solarTitle"> Theory:-  </p>
+<p class="solarTheory">The efficiency is the most commonly used parameter to compare the performance of one solar cell to another. Efficiency is defined as the ratio of energy output from the solar cell to input energy from the sun. In addition to reflecting the performance of the solar cell itself, the efficiency depends on the spectrum and intensity of the incident sunlight and the temperature of the solar cell. Therefore, conditions under which efficiency is measured must be carefully controlled in order to compare the performance of one device to another. Terrestrial solar cells are measured under AM1.5 conditions and at a temperature of 25°C. Solar cells intended for space use are measured under AM0 conditions. Recent top efficiency solar cell results are given in the page</p>
+<p class="solarTitle"> Procedure:-  </p>
+<p class="solarTheory">The efficiency is the most commonly used parameter to compare the performance of one solar cell to another. Efficiency is defined as the ratio of energy output from the solar cell to input energy from the sun. In addition to reflecting the performance of the solar cell itself, the efficiency depends on the spectrum and intensity of the incident sunlight and the temperature of the solar cell. Therefore, conditions under which efficiency is measured must be carefully controlled in order to compare the performance of one device to another. Terrestrial solar cells are measured under AM1.5 conditions and at a temperature of 25°C. Solar cells intended for space use are measured under AM0 conditions. Recent top efficiency solar cell results are given in the page</p>
+
   <div class="row">
+    <div class="materialBox">
+      <div class="{{materialName=='g_a'?'materialSpanSelect':'materialSpan'}}" (click)="selectMaterial('g_a')"  >Gallium arsenide</div>
+      <div class="{{materialName=='a_s'?'materialSpanSelect':'materialSpan'}}" (click)="selectMaterial('a_s')" >Amorphous silicon</div>
+      <div class="{{materialName=='c_t'?'materialSpanSelect':'materialSpan'}}" (click)="selectMaterial('c_t')" >Cadium telluride</div>
+      <div class="{{materialName=='c_i_g_s'?'materialSpanSelect':'materialSpan'}}" (click)="selectMaterial('c_i_g_s')" >copper indium gallium selenide </div>
+    </div>
 
 
     <!-- left portion start -->
@@ -61,7 +62,8 @@
       </div>
       <div class="row">
         <p class="OutputHead">Output (Isc)</p>
-        <p class="constantDetails">current density of short circuit Jsc: <span class="constantValue">38.75 mA/cm2</span></p>
+        <p *ngIf="show_ff>0"  class="constantDetails">Fill factor of material: <span class="constantValue">{{show_ff}}</span></p>
+        <p *ngIf="show_efficency>0" class="constantDetails">Efficiency of material (%): <span class="constantValue">{{show_efficency}}</span></p>
       </div>
       
     </div>
@@ -74,9 +76,9 @@
       <table class="table mt-5">
         <thead>
           <tr>
-            <th scope="col">#</th>
-            <th scope="col">J.sc</th>
-            <th scope="col">I.sc</th>
+            <th scope="col">S.no</th>
+            <th scope="col">J.sc (mA)</th>
+            <th scope="col">I.sc (mA)</th>
           </tr>
         </thead>
         <tbody>
@@ -95,9 +97,9 @@
       <table class="table mt-5">
         <thead>
           <tr>
-            <th scope="col">#</th>
-            <th scope="col">J<sub>sc</sub></th>
-            <th scope="col">V<sub>oc</sub></th>
+            <th scope="col">S.no</th>
+            <th scope="col">J<sub>sc</sub> (mA)</th>
+            <th scope="col">V<sub>oc</sub> (Volt)</th>
           </tr>
         </thead>
         <tbody>
@@ -119,6 +121,7 @@
     <div class="col">
       <p-chart type="line" [data]="dataISC" [options]="options" width="40vw" height="60vh"></p-chart>
       <p-chart type="line" [data]="dataVOC" [options]="options" width="40vw" height="60vh"></p-chart>
+      <p-chart type="line" [data]="bothIscVoc" [options]="options" width="40vw" height="60vh"></p-chart>
     </div>
   </div>
 
